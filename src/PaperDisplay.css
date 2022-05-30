@@ -1,0 +1,47 @@
+.paperlistContainer {
+  margin: 12px 40px 0 40px;
+  font-size: 0.9rem;
+}
+
+.paperDisplayHeadSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paperDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.paperDisplayHeading {
+  margin: 10px 0 0 0;
+}
+
+.paperDisplayHeadingNumbers {
+  margin: 0 0 10px 0;
+  color: #e2231b;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  align-items: center;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.journal {
+  text-transform: capitalize;
+  font-style: italic;
+  color: #e2231b;
+}
+
+.volume {
+  font-style: italic;
+}

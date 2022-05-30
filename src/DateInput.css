@@ -1,0 +1,67 @@
+.dateInput {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: auto;
+}
+
+.formItems {
+  display: flex;
+  align-items: flex-end;
+}
+
+.formAndLabel {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+
+.formLabel {
+  font-size: 0.7rem;
+  color: white;
+}
+
+.column {
+  display: inline-flex;
+  margin-right: 5px;
+  padding: 0;
+}
+
+.searchTitle {
+  font-size: 0.7rem;
+  color: white;
+  margin: 0 5px;
+}
+
+.instruction {
+  margin: 2px;
+}
+
+.titleInstruct {
+  padding: 0;
+  margin-bottom: 0;
+}
+.dateInputForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 5px;
+}
+
+.dateInputButton {
+  background-color: #e2231b;
+  /* margin: 2px 0 2px 0; */
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 1.6rem;
+}
+
+.dateInputButton:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #e2231b;
+  border: 1px solid #e2231b;
+}

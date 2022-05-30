@@ -1,0 +1,16 @@
+.linkButton {
+  background-color: rgb(109, 148, 255);
+  margin: 2px 0 2px 0;
+  color: white;
+  height: 2rem;
+  width: 140px;
+  border: none;
+  margin: 0 5px;
+}
+
+.linkButton:hover {
+  background-color: white;
+  border: 1px solid rgb(109, 148, 255);
+  color: rgb(109, 148, 255);
+  cursor: pointer;
+}

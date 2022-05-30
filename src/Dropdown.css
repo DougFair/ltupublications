@@ -1,0 +1,22 @@
+.dropdownContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdownTitle {
+  margin: 0 0 5px 0;
+}
+
+.instituteDropdown {
+  margin: 0;
+  height: 1.5rem;
+  border-radius: 5px;
+  width: 180px;
+  border: 1px solid #e2231b;
+  color: #e2231b;
+}
+
+.instituteDropdown:hover {
+  cursor: pointer;
+}

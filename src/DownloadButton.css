@@ -1,0 +1,15 @@
+.downloadButton {
+  background-color: green;
+  height: 2rem;
+  width: 140px;
+  border: none;
+  color: white;
+  margin: 0 5px;
+}
+
+.downloadButton:hover {
+  cursor: pointer;
+  border: 1px solid green;
+  color: green;
+  background-color: white;
+}
