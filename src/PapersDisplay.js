@@ -94,7 +94,7 @@ const PapersDisplay = (props) => {
               {`(${props.papersListInputedDate.length} papers)`}
             </p>
             <div className="actionButtons">
-              <LinkButton to="/abstracts">Retrieve Abstracts</LinkButton>
+              {/* <LinkButton to="/abstracts">Retrieve Abstracts</LinkButton> */}
               <DownloadButton prepareData={props.prepareData} />
             </div>
           </div>
@@ -112,7 +112,7 @@ const PapersDisplay = (props) => {
               {`(${props.papersListInputedDate.length} papers)`}
             </p>
             <div className="actionButtons">
-              <LinkButton to="/abstracts">Retrieve Abstracts</LinkButton>
+              {/* <LinkButton to="/abstracts">Retrieve Abstracts</LinkButton> */}
               <DownloadButton prepareData={props.prepareData} />
             </div>
           </div>
@@ -173,7 +173,7 @@ const PapersDisplay = (props) => {
           </p>
         </div>
         <div className="actionButtons">
-          <LinkButton to="/abstracts">Retrieve Abstracts</LinkButton>
+          {/* <LinkButton to="/abstracts">Retrieve Abstracts</LinkButton> */}
           <DownloadButton prepareData={props.prepareData} />
         </div>
         {!props.papersList.length ? (

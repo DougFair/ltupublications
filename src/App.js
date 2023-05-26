@@ -55,7 +55,7 @@ class App extends Component {
     } else if (newInstitute === "LTU") {
       urlunencoded = `((La Trobe University[Affiliation]) AND ("`;
     } else if (newInstitute === "SABE") {
-      urlunencoded = `((Biomedicine and Environment, La Trobe University[Affiliation]) AND ("`;
+      urlunencoded = `((Agriculture, Biomedicine and Environment[Affiliation]) AND ("`;
     }
 
     this.setState({ urlunencoded }, () => this.selectInstituteGetPapers());

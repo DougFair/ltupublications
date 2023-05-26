@@ -4,7 +4,7 @@ import "./DownloadButton.css";
 const DownloadButton = (props) => {
   return (
     <button className="downloadButton" onClick={() => props.prepareData()}>
-      Download
+      Download List (.xlxs)
     </button>
   );
 };
