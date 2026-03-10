@@ -103,10 +103,10 @@ const PapersDisplay = (props) => {
             <h2 className="paperDisplayHeading">
               {`${props.institute} papers published between
             ${moment(props.inputedDate1, "YYYY-MM-DD").format(
-              "DD/MM/YYYY"
+              "DD/MM/YYYY",
             )} - ${moment(props.inputedDate2, "YYYY-MM-DD").format(
-                "DD/MM/YYYY"
-              )}`}
+              "DD/MM/YYYY",
+            )}`}
             </h2>
             <p className="paperDisplayHeadingNumbers">
               {`(${props.papersListInputedDate.length} papers)`}
@@ -178,7 +178,7 @@ const PapersDisplay = (props) => {
         </div>
         {!props.papersList.length ? (
           <p>
-            {`There were no ${props.institute} papers published yesterday in the last 30 days.`}
+            {`There were no ${props.institute} papers published in the last 30 days.`}
           </p>
         ) : (
           month

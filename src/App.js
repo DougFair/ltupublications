@@ -42,7 +42,7 @@ class App extends Component {
         { idlist: response.data.esearchresult.idlist, loading: false },
         () => {
           this.addPapers(this.state.idlist);
-        }
+        },
       );
     });
   }
@@ -56,6 +56,8 @@ class App extends Component {
       urlunencoded = `((La Trobe University[Affiliation]) AND ("`;
     } else if (newInstitute === "SABE") {
       urlunencoded = `((Agriculture, Biomedicine and Environment[Affiliation]) AND ("`;
+    } else if (newInstitute === "BiochemChem") {
+      urlunencoded = `((Department of Biochemistry and Chemistry, La Trobe University[Affiliation[Affiliation]) AND ("`;
     }
 
     this.setState({ urlunencoded }, () => this.selectInstituteGetPapers());
@@ -74,7 +76,7 @@ class App extends Component {
           { idlist: response.data.esearchresult.idlist, loading: false },
           () => {
             this.addPapers(this.state.idlist);
-          }
+          },
         );
       });
     } else {
@@ -90,7 +92,7 @@ class App extends Component {
 
       axios
         .get(
-          `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&rettype=abstract&id=${paperListString}&api_key=9476810b14695bd14f228e63433facbf9c08`
+          `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&rettype=abstract&id=${paperListString}&api_key=9476810b14695bd14f228e63433facbf9c08`,
         )
         .then((response) => {
           this.setState({ loading: false });
@@ -107,7 +109,7 @@ class App extends Component {
             authors.map((author, idx) =>
               idx > 0
                 ? authorList.push(" " + author.name)
-                : authorList.push(author.name)
+                : authorList.push(author.name),
             );
             paperObj.id = id;
             paperObj.title = title;
@@ -139,7 +141,7 @@ class App extends Component {
 
       axios
         .get(
-          `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&rettype=abstract&id=${paperListString}&api_key=9476810b14695bd14f228e63433facbf9c08`
+          `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&rettype=abstract&id=${paperListString}&api_key=9476810b14695bd14f228e63433facbf9c08`,
         )
         .then((response) => {
           this.setState({ loading: false });
@@ -156,7 +158,7 @@ class App extends Component {
             authors.map((author, idx) =>
               idx > 0
                 ? authorList.push(" " + author.name)
-                : authorList.push(author.name)
+                : authorList.push(author.name),
             );
             paperObj.id = id;
             paperObj.title = title;
@@ -188,7 +190,7 @@ class App extends Component {
     let idlistString = idlist.toString();
     axios
       .get(
-        `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id=${idlistString}&api_key=9476810b14695bd14f228e63433facbf9c08`
+        `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id=${idlistString}&api_key=9476810b14695bd14f228e63433facbf9c08`,
       )
       .then((response3) => {
         abstractObj.abstract = response3.data;
@@ -224,8 +226,8 @@ class App extends Component {
         { idlistInputedDate: response.data.esearchresult.idlist },
         () => {
           this.addPapersInputedDate(this.state.idlistInputedDate);
-        }
-      )
+        },
+      ),
     );
   };
 
@@ -256,13 +258,13 @@ class App extends Component {
       ...reportPapersData,
     ];
     const reportPapersWorkSheet = xlsx.utils.aoa_to_sheet(
-      reportPapersWorkSheetData
+      reportPapersWorkSheetData,
     );
 
     xlsx.utils.book_append_sheet(
       workBook,
       reportPapersWorkSheet,
-      `${this.state.institute} - Last 30 days`
+      `${this.state.institute} - Last 30 days`,
     );
 
     if (this.state.papersListInputedDate.length) {
@@ -281,7 +283,7 @@ class App extends Component {
         ...reportPapersData,
       ];
       const reportPapersWorkSheet = xlsx.utils.aoa_to_sheet(
-        reportPapersWorkSheetData
+        reportPapersWorkSheetData,
       );
 
       let date2;
@@ -289,7 +291,7 @@ class App extends Component {
         date2 = "today";
       } else {
         date2 = moment(this.state.inputedDate2, "YYYY-MM-DD").format(
-          "DD-MM-YYYY"
+          "DD-MM-YYYY",
         );
       }
 
@@ -298,8 +300,8 @@ class App extends Component {
         reportPapersWorkSheet,
         `${this.state.institute} - ${moment(
           this.state.inputedDate1,
-          "YYYY-MM-DD"
-        ).format("DD-MM-YYYY")} to ${date2}`
+          "YYYY-MM-DD",
+        ).format("DD-MM-YYYY")} to ${date2}`,
       );
     }
 

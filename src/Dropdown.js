@@ -12,6 +12,7 @@ const Dropdown = (props) => {
         className="instituteDropdown"
       >
         <option value="LIMS">LIMS</option>
+        <option value="BiochemChem">Depart. Biochm and Chem</option>
         <option value="SABE">SABE</option>
         <option value="LTU">La Trobe University </option>
       </select>
